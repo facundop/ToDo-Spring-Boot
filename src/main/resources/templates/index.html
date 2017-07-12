@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Tasks</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Tasks</h1>
+
+		<button class="btn btn-success" data-toggle="modal"
+			data-target="#addTaskModal">Add Task</button>
+
+		<div th:include="tables :: tasksTable"></div>
+	</div>
+	
+	<hr />
+
+	<!-- Modals -->
+	<div th:include="modals :: addTaskModal"></div>
+	<div th:include="modals :: addUserModal"></div>
+
+	<div th:include="modals :: updateTaskModal"></div>
+	<div th:include="modals :: updateUserModal"></div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
